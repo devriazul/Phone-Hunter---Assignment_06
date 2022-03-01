@@ -37,7 +37,7 @@ const loadingSpinner = display => {
 // user input validation
      if(phones.length == 0){
          errorMessage.innerHTML =`
-             <h2 class="text-danger">No Record Found!</h2>
+             <h5 class="text-danger">Please input valid keyword!</h5>
          `;
      }else{
          errorMessage.textContent = '';
