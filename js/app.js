@@ -80,7 +80,7 @@ const loadingSpinner = display => {
      phoneInfoContainer.innerHTML = `
 
      <div class="col-md-4" style="background-image:url('${phone.image}');background-repeat: no-repeat; background-position: center center; background-size: fit;">
-          <div style="height:300px overflow:scroll"></div>
+          <div style="height:300px"></div>
       </div>
       <div class="col-md-8">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -90,9 +90,8 @@ const loadingSpinner = display => {
               <h6 class="category">Brand: <span>${phone.brand}</span></h6>
               <hr>
               <h5> Main Features:</h5>
-              <p>Storage & Memory: ${phone.mainFeatures.storage}, ${phone.mainFeatures.memory}</p>
+              <p>Memory:${phone.mainFeatures.memory}</p>
               <p>Display Size: ${phone.mainFeatures.displaySize}</p>
-              <p>Chipset: ${phone.mainFeatures.chipSet}</p>
               <p class="card-text">Sensors: ${phone.mainFeatures.sensors}</p>
             </div>
         </div>
