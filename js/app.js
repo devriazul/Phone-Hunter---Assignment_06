@@ -38,7 +38,7 @@ const loadingSpinner = display => {
     let counter = 0;
      if(phones.length == 0){
          errorMessage.innerHTML =`
-             <h5 class="text-danger">Please input valid keyword!</h5>
+             <h5 class="text-danger">Phone Not Found!</h5>
          `;
      }else{
          errorMessage.textContent = '';
