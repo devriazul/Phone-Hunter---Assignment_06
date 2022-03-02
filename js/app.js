@@ -35,6 +35,7 @@ const loadingSpinner = display => {
      document.getElementById('phone-count').innerText = `Total result: ${phoneCount}`;
 
 // user input validation
+    let counter = 0;
      if(phones.length == 0){
          errorMessage.innerHTML =`
              <h5 class="text-danger">Please input valid keyword!</h5>
@@ -42,7 +43,9 @@ const loadingSpinner = display => {
      }else{
          errorMessage.textContent = '';
          phones.forEach(phone => {
-             const div = document.createElement('div');
+             counter ++;
+             if(counter<=20){
+                const div = document.createElement('div');
              div.classList.add('col', 'col-md-6', 'col-lg-4');
              div.innerHTML = `
                  <div class="card">
@@ -59,6 +62,7 @@ const loadingSpinner = display => {
                  </div>
              `;
              phoneContainer.appendChild(div);
+             }
          })
      } 
  }
